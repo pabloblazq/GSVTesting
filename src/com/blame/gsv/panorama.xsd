@@ -1,0 +1,62 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="panorama">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="data_properties">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="copyright" />
+							<xs:element type="xs:string" name="text" />
+							<xs:element type="xs:byte" name="street_range" />
+							<xs:element type="xs:string" name="region" />
+							<xs:element type="xs:string" name="country" />
+						</xs:sequence>
+						<xs:attribute type="xs:short" name="image_width" />
+						<xs:attribute type="xs:short" name="image_height" />
+						<xs:attribute type="xs:short" name="tile_width" />
+						<xs:attribute type="xs:short" name="tile_height" />
+						<xs:attribute type="xs:string" name="image_date" />
+						<xs:attribute type="xs:string" name="pano_id" />
+						<xs:attribute type="xs:string" name="imagery_type" />
+						<xs:attribute type="xs:short" name="num_zoom_levels" />
+						<xs:attribute type="xs:float" name="lat" />
+						<xs:attribute type="xs:float" name="lng" />
+						<xs:attribute type="xs:float" name="original_lat" />
+						<xs:attribute type="xs:float" name="original_lng" />
+						<xs:attribute type="xs:float" name="elevation_wgs84_m" />
+						<xs:attribute type="xs:float" name="elevation_egm96_m" />
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="projection_properties">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute type="xs:string" name="projection_type" />
+								<xs:attribute type="xs:float" name="pano_yaw_deg" />
+								<xs:attribute type="xs:float" name="tilt_yaw_deg" />
+								<xs:attribute type="xs:float" name="tilt_pitch_deg" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="annotation_properties">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="link" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="link_text" />
+									</xs:sequence>
+									<xs:attribute type="xs:float" name="yaw_deg" use="optional" />
+									<xs:attribute type="xs:string" name="pano_id" use="optional" />
+									<xs:attribute type="xs:string" name="road_argb" use="optional" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

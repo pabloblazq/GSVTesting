@@ -1,0 +1,61 @@
+2016-12-22 10:17:14 INFO  Main:10 - Starting application
+2016-12-22 10:17:14 INFO  Main:12 - Application finished
+2016-12-22 10:28:37 INFO  Main:18 - Starting application
+2016-12-22 10:28:37 DEBUG RequestAddCookies:122 - CookieSpec selected: default
+2016-12-22 10:28:37 DEBUG RequestAuthCache:76 - Auth cache not set in the context
+2016-12-22 10:28:37 DEBUG PoolingHttpClientConnectionManager:249 - Connection request: [route: {}->http://maps.google.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2016-12-22 10:28:37 DEBUG PoolingHttpClientConnectionManager:282 - Connection leased: [id: 0][route: {}->http://maps.google.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-12-22 10:28:37 DEBUG MainClientExec:234 - Opening connection {}->http://maps.google.com:80
+2016-12-22 10:28:37 DEBUG DefaultHttpClientConnectionOperator:138 - Connecting to maps.google.com/209.85.202.102:80
+2016-12-22 10:28:37 DEBUG DefaultHttpClientConnectionOperator:145 - Connection established 192.168.16.92:50379<->209.85.202.102:80
+2016-12-22 10:28:37 DEBUG MainClientExec:255 - Executing request GET /cbk?output=xml&panoid=XYEpYsvzCXYck-Am0FypTQ&cb_client=api&pm=0&ph=0&v=2 HTTP/1.1
+2016-12-22 10:28:37 DEBUG MainClientExec:260 - Target auth state: UNCHALLENGED
+2016-12-22 10:28:37 DEBUG MainClientExec:266 - Proxy auth state: UNCHALLENGED
+2016-12-22 10:28:37 DEBUG headers:135 - http-outgoing-0 >> GET /cbk?output=xml&panoid=XYEpYsvzCXYck-Am0FypTQ&cb_client=api&pm=0&ph=0&v=2 HTTP/1.1
+2016-12-22 10:28:37 DEBUG headers:138 - http-outgoing-0 >> Host: maps.google.com
+2016-12-22 10:28:37 DEBUG headers:138 - http-outgoing-0 >> Connection: Keep-Alive
+2016-12-22 10:28:37 DEBUG headers:138 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_71)
+2016-12-22 10:28:37 DEBUG headers:138 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "GET /cbk?output=xml&panoid=XYEpYsvzCXYck-Am0FypTQ&cb_client=api&pm=0&ph=0&v=2 HTTP/1.1[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "Host: maps.google.com[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_71)[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 >> "[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Content-Type: text/xml; charset=UTF-8[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Date: Thu, 22 Dec 2016 09:28:37 GMT[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Expires: Thu, 22 Dec 2016 10:28:37 GMT[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Cache-Control: public, max-age=3600[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Last-Modified: Fri, 13 Feb 2009 23:31:30 GMT[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "X-Content-Type-Options: nosniff[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Access-Control-Allow-Origin: *[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Vary: Origin[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Server: Alleycat Server 1.0[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "Content-Length: 542[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "[\r][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x2][0xff][0xad]SIn[0xdb]0[0x14][0xbd][\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "[0xc1]u[0xad][0xc9][0xd4][0x4]P[\n]"
+2016-12-22 10:28:37 DEBUG wire:72 - http-outgoing-0 << "R#.[0x1a][0xa4][0x8][0xea]:m[0xbc]"X[0x89][0x96][0xe9]P[0xa4]J[0xd1][0x83]r[0xa3]^[0xa3]'+e;[0xb6][0xea][0xa2][0xbb][0xee][0xc4][0xf7][0xde][0xff][0xef]O[0xc2]7[0xfb]Z[0x80]-[0xd3]-W2[0x83][0xbe][0xe3]A[0xc0]d[0xa1]J.[0xab][0xc]>[0xcd][0xa7][0xa3][0x4][0x82][0x9b][0x1c]7T*Mk[0x9a][0xe3][0x92][0x1a]J[0x1a][0xad][0x1a][0xa6][\r]g-[0xe0]5[0xad][0x18][0xd9][0xf1][0xd2][0xac]l[0xfc]x[0xec][0x7][0xf0][0x84][0xad][0x18][0xaf]V&[0x83]Q[0x14]F[0x10][0x18].[0xce][0xb2][0xb0][0x17][0x1d][0x80]7Mx[0x9][0xb3][0x6],[0x83][0x81][0xe7]G#/[0x84][0xa0]w&[0xbc][0xcc][0xe0][0xf3][0xe2][0xae]Y[0xb4][0xdb][0xd7][0xc9][0xf3][0xa2]x[0x19][0xdd][0xd6][0xde][0xb4]k[0xe6][0x9f]OQ[0xba]#[0xa6]kl[0x9c][0xf][0x81][0xdc][0xd4][0xe4]U[0xa9][0x9a][0x8][0xb6]e[0xa2][0xb5][0xc9]![0x10][0xd4][0x9a] [0xcf]A[0x91][0x87]Pl[0xdf]}{[0xa3][0xb1][0x13][0xa1][0xc8][0xf][0x10][0x4]J[0xf3][0x8a]K*[0xc8]P[0x18]%C[0xe2][0x12][0xe1][0xa5][0xb6][0x1f]f[0xb3]Sc[0xa7]FvU[0x9b] Rg0[0xe][0x3][0xc7][0x1f][0xa7]a[0x92][0xc]iV[0xd5]it[0xa0]=[0xcf][0x9][0xd2][0xd4]O[0x11][0xcc]q[0xa1][0x9a]N[0xf7][0xbd][0xe7][0xbf]~[0x82][0xbe]Y[0xf0]A[0xa9]J0[0xec]^[0x18]l[0xd8][0xde][0xe4]A[\n]"
+2016-12-22 10:28:37 DEBUG wire:86 - http-outgoing-0 << "&T[0x8][0x6]J[0x6]ne[0xa9][0xb4][0xa6][0xd8]=0[0xb8]5[0x9a]1C4[0x95][0x15][0xb3]:[0xec][0xfe][0x1]`[0xcd]*[@[0xfe][0x89][0x96][0x9a][0x97][0xef][0xc0]D[0xd5][0xf5]Fr[0xd3][0x1][0xb5][0x4]G[0x10][0xbb]'[0x8d][0xad]g#[0x8d][0xee][0xf2]/[\r][0xe5][0xb2]/[0xe2][0xf8][0xc4][0xee][0xd5][0xbe][0xed])h[0xb5]f[0xc5][0xa1][0xb5][0xc1][0x19][0xc][0xd0][0xe3]"[0xda]f[0xc5]4/[0xa8]8[0xad][0xb0][0xa3];R2;C?[0xf6][0x9d][0xf8][0xb0]~s[0x1]G[0x1]r[0xd0][0x1b][0xda]pS[0xac]Nb[0x7][0xa5][0xd0][0xcd]1[0x95]R[0x19]ze[0x9a]c[0xc1][0xe5][0xb]8'[0x19][0x87]V[0x1e][\r]N[0xe6][0xdb]#[0xf9][0xfa][0x90]hr[0xaf][0xe6][0xc1][0xfa]1|[0xaa][0xde][0x8b][0xc5][0xac][0x82]@+Z[0x12][0xaa][0xab][0xef][0x19][0xf4][0xf6][0x89][0xb7],[0x97]I[0x1c][0xc0]c:r[0x18][0xed][0xdf][0x13][0xbf]p[0xc7][0xef]ks?[0xf6][0x9c]$N[0xd3]t[0xe0]_P:[0xfb][0xf8][0xe3][0x1][0xd1]`=Cw[0xa8][0xab][0xb7][0xf7][0xf1][0xee][0xf9][0xbb][0xff][0x18][0x8a]{[0xfe]Y[0x3][[0xe7][0x95]k[0xde][0x3][0x0][0x0]"
+2016-12-22 10:28:37 DEBUG headers:124 - http-outgoing-0 << HTTP/1.1 200 OK
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Content-Type: text/xml; charset=UTF-8
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Date: Thu, 22 Dec 2016 09:28:37 GMT
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Expires: Thu, 22 Dec 2016 10:28:37 GMT
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Cache-Control: public, max-age=3600
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Last-Modified: Fri, 13 Feb 2009 23:31:30 GMT
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << X-Content-Type-Options: nosniff
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << X-XSS-Protection: 1; mode=block
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Access-Control-Allow-Origin: *
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Vary: Origin
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Content-Encoding: gzip
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Server: Alleycat Server 1.0
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << Content-Length: 542
+2016-12-22 10:28:37 DEBUG headers:127 - http-outgoing-0 << X-Frame-Options: SAMEORIGIN
+2016-12-22 10:28:37 DEBUG MainClientExec:284 - Connection can be kept alive indefinitely
+2016-12-22 10:28:37 DEBUG PoolingHttpClientConnectionManager:314 - Connection [id: 0][route: {}->http://maps.google.com:80] can be kept alive indefinitely
+2016-12-22 10:28:37 DEBUG PoolingHttpClientConnectionManager:320 - Connection released: [id: 0][route: {}->http://maps.google.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2016-12-22 10:28:37 INFO  Main:41 - Application finished

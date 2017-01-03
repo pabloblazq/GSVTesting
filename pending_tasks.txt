@@ -1,0 +1,15 @@
+-- Identify into the navigation buttons if it will follow the same road, turn left, turn right:
+	For example:
+		- Follow road "Calle A"
+		- Turn left into "Calle B"
+		- Turn right into "Calle C"
+		- ...
+
+
+-- Use as input a panoramicId, or a latitude/longitude.
+
+
+-- Perform a way to store the images into an output folder, and name them sequentially with a counter.
+
+
+-- Try to use as input a Google Maps route, so that the full navigation can be automatic. 

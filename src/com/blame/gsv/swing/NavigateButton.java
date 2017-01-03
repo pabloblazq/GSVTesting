@@ -12,6 +12,10 @@ public class NavigateButton extends JButton {
 		super("Go to " + directionDegrees);
 		this.directionDegrees = directionDegrees;
 	}
+
+	public Float getDirectionDegrees() {
+		return directionDegrees;
+	}
 	
 	
 }

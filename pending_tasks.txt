@@ -6,10 +6,14 @@
 		- ...
 
 
+-- Create a configuration file to store some values like Google key, output folder, etc.
+
+
 -- Use as input a panoramicId, or a latitude/longitude.
 
 
 -- Perform a way to store the images into an output folder, and name them sequentially with a counter.
 
 
--- Try to use as input a Google Maps route, so that the full navigation can be automatic. 
+-- Try to use as input a Google Maps route, so that the full navigation can be automatic.
+ 

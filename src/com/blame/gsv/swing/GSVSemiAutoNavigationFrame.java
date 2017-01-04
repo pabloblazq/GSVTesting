@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
-import javax.swing.JTextPane;
 
 import com.blame.gsv.GSVPanorama;
 import com.blame.gsv.jaxbgenerated.Panorama;
@@ -25,7 +24,6 @@ public class GSVSemiAutoNavigationFrame extends JFrame {
 	protected GSVSemiAutoNavigationFrame thisFrame;
 	protected JPanel contentPane;
 	protected ImagePanel imagePanel;
-	protected JTextPane textPanel;
 	protected JButton btnNewButton;
 
 	protected Vector<NavigateButton> navButtons;
@@ -69,29 +67,24 @@ public class GSVSemiAutoNavigationFrame extends JFrame {
 		contentPane.setLayout(null);
 
 		imagePanel = new ImagePanel();
-		imagePanel.setBounds(10, 46, 640, 480);
+		imagePanel.setBounds(10, 11, 640, 480);
 		contentPane.add(imagePanel);
-
-		textPanel = new JTextPane();
-		textPanel.setBounds(10, 540, 640, 128);
-		contentPane.add(textPanel);
 
 		BufferedImage bi = gp.getPanoramaImageFromURL("XYEpYsvzCXYck-Am0FypTQ", 640, 480, 120, 0, 0, "AIzaSyDxcLOH13FSJrUV2KfU1RfBR6TsuJ6DDRI");
 		imagePanel.setImage(bi);
 		imagePanel.repaint();
 
 		panorama = gp.getPanoramaMetadataFromURL("XYEpYsvzCXYck-Am0FypTQ");
-		textPanel.setText(panorama.toString());
 
-		int xPosition = 10;
+		int yPosition = 500;
 		navButtons = new Vector<NavigateButton>();
 		for(Link link : panorama.getAnnotationProperties().getLink()) {
-			NavigateButton button = new NavigateButton(link.getYawDeg());
+			NavigateButton button = new NavigateButton(link);
 			button.addActionListener(new NavigateButtonActionListener());
-			button.setBounds(xPosition, 12, 150, 23);
+			button.setBounds(10, yPosition, 350, 23);
 			contentPane.add(button);
 			navButtons.add(button);
-			xPosition += 160;
+			yPosition += 30;
 		}
 
 	}
@@ -113,7 +106,7 @@ public class GSVSemiAutoNavigationFrame extends JFrame {
 				// look for the link having the same directionDegree than the original button
 				Link linkToFollow = null;
 				for(Link link : panorama.getAnnotationProperties().getLink()) {
-					if(link.getYawDeg() == originButton.getDirectionDegrees()) {
+					if(link.getYawDeg() == originButton.getLink().getYawDeg()) {
 						linkToFollow = link;
 						break;
 					}
@@ -124,7 +117,7 @@ public class GSVSemiAutoNavigationFrame extends JFrame {
 				// refresh the image for that panoramaId
 				BufferedImage bi = gp.getPanoramaImageFromURL(panoramaId, 640, 480, 120, linkToFollow.getYawDeg(), 0, "AIzaSyDxcLOH13FSJrUV2KfU1RfBR6TsuJ6DDRI");
 				imagePanel.setImage(bi);
-				imagePanel.repaint();
+				//imagePanel.repaint();
 				
 				// refresh the panorama object
 				panorama = gp.getPanoramaMetadataFromURL(panoramaId);
@@ -147,16 +140,16 @@ public class GSVSemiAutoNavigationFrame extends JFrame {
 				}
 
 				// show new buttons for the new panorama object
-				int xPosition = 10;
+				int yPosition = 500;
 				for(Link link : panorama.getAnnotationProperties().getLink())
 					if(!link.getPanoId().equals(previousPanoramaId)) {
-						NavigateButton button = new NavigateButton(link.getYawDeg());
+						NavigateButton button = new NavigateButton(linkToFollow, link);
 						button.addActionListener(new NavigateButtonActionListener());
-						button.setBounds(xPosition, 12, 150, 23);
+						button.setBounds(10, yPosition, 350, 23);
 						contentPane.add(button);
 						navButtons.add(button);
 						button.setEnabled(!autoNavigation);
-						xPosition += 160;
+						yPosition += 30;
 					}
 
 				if(autoNavigation)
